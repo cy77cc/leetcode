@@ -17,7 +17,7 @@ func getNum(L *ListNode, index int) (int, bool) {
 	return tmp.Val, true
 }
 
-func append(L *ListNode, value int) {
+func myappend(L *ListNode, value int) {
 	if L.Val == -1 && L.Next == nil {
 		L.Val = value
 		return
@@ -47,10 +47,10 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		} else {
 			nextval = 0
 		}
-		append(L, result)
+		myappend(L, result)
 	}
 	if nextval == 1 {
-		append(L, nextval)
+		myappend(L, nextval)
 	}
 	return L
 }

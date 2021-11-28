@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+func findMedianSortedArraysv1(nums1 []int, nums2 []int) float64 {
 	length := len(nums1) + len(nums2)
 	result := make([]int, 0)
 	leftindex := 0
@@ -43,6 +43,21 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	}
 }
 
+func findMedianSortedArraysv2(nums1 []int, nums2 []int) float64 {
+	mid := (len(nums1) + len(nums2))/2
+	if mid == 0 {
+		if len(nums1) == 0 && len(nums2) == 0 {
+			return 0
+		} else if len(nums1) == 0 {
+			return float64(nums2[0])
+		} else {
+			return float64(nums1[0])
+		}
+	} else {
+
+	}
+}
+
 func main() {
-	fmt.Println(findMedianSortedArrays([]int{1}, []int{2}))
+	fmt.Println(findMedianSortedArraysv2([]int{1}, []int{2}))
 }
